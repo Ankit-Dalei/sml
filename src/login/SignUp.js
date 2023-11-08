@@ -42,6 +42,7 @@ const SignUp = () => {
                 title: "Oops...",
                 text: "Enter Valid Email"
               });
+            //   
         }
         else {
             const data={username,email,password,role}
