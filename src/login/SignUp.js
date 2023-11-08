@@ -42,7 +42,7 @@ const SignUp = () => {
                 title: "Oops...",
                 text: "Enter Valid Email"
               });
-            //   
+            //   ccg
         }
         else {
             const data={username,email,password,role}
