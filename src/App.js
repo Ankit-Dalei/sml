@@ -14,6 +14,7 @@ import Home from './components/Home';
 import Login from './login/Login';
 import SignUp from './login/SignUp';
 import ForgotPassword from './login/ForgotPassword';
+import Admin from './Admin/Admin';
 
 function App() {
   return (
@@ -21,15 +22,18 @@ function App() {
       <Router>
         {/* <Nav/> */}
         <Routes>
-          {/* <Route path='/' Component={Main}/> */}
-          {/* <Route path='/Nav' Component={Nav}/> */}
+          
+          <Route path='/admin/:lid' Component={Admin}/>
           <Route path='/' Component={Home}/>
-          <Route path='/likes' Component={Likes}/>
-          <Route path='/watch_later' Component={Watchlater}/>
-          <Route path='/Contact' Component={Contact}/>
-          <Route path='/history' Component={History}/>
-          <Route path='/VR' Component={Vr}/>
-          <Route path='/0' Component={View}/>
+          <Route path='/Nav' Component={Nav}>
+          <Route path='' Component={Main}/>
+          <Route path='likes' Component={Likes}/>
+          <Route path='watch_later' Component={Watchlater}/>
+          <Route path='Contact' Component={Contact}/>
+          <Route path='history' Component={History}/>
+          <Route path='VR' Component={Vr}/>
+          <Route path='0' Component={View}/>
+          </Route>
           <Route path='/login' Component={Login}/>
           <Route path='/Signup' Component={SignUp}/>
           <Route path='/forgot_password' Component={ForgotPassword}/>

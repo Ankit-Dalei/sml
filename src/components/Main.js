@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 
 const Main = () => {
-  let image=<img src="./img/model.jpg" alt=""/>
+  let image=<img src="./img/model.jpg" alt="img"/>
   let Name=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quae, impedit deserunt iusto voluptatum harum dolor. Expedita repudiandae doloremque laboriosam?`
   let Publisher=`Centurion University`
   let Views=`41M views . `

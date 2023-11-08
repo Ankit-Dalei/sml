@@ -78,7 +78,7 @@ const SignUp = () => {
   return (
     <>
       <div className="Home_back_body">
-        <img src="./img/bg.png"/>
+        <img src="./img/bg.png" alt="./img/bg.png"/>
       </div>
       <div className="Sign_body">
         <div className="Sign_body_section">

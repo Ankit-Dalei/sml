@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Sidebar from './Sidebar'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import Space from './Space'
 import Profile from './Profile'
 
 const Nav = () => {
-  const img=<img src="./img/3d-smart-learning-high-resolution-logo-transparent.png"/>
+
+  const img=<img src="./img/3d-smart-learning-high-resolution-logo-transparent.png" alt="img"/>
   const [show, setShow]=useState("true")
   const [showpro, setShowpro]=useState("false")
   // const img =()=>{
@@ -57,10 +58,11 @@ const Nav = () => {
       {show ==="true" && <Sidebar/>}
       {show ==="false"}
 
-      {showpro ==="true" && <Profile/>}
+      {showpro ==="true" && <Profile />}
       {showpro ==="false"}
       
       <Space/>
+      <Outlet/>
     </>
   )
 }

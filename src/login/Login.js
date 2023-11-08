@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const Login = () => {
+    const navigate=useNavigate();
     const [userLogin,SetUserLogin]=useState({
         Username:"",
         Password:""
@@ -29,17 +30,39 @@ const Login = () => {
                 text: "Enter Valid Password"
               });
         }
-        else if (!Username.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
-            // console.log(Email)
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Enter Valid Email"
-              });
-        }
+        // else if (!Username.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+        //     // console.log(Email)
+        //     Swal.fire({
+        //         icon: "error",
+        //         title: "Oops...",
+        //         text: "Enter Valid Email"
+        //       });
+        // }
         else {
             const data={Username,Password}
-            console.log(data)
+            // console.log(data)
+            rs()
+            async function rs() {
+                let ft=await fetch(`http://localhost:8080/login/${data.Username}/${data.Password}`,{
+                    method:"get",
+                    headers:{"Content-Type":"application/json"}, 
+                })
+                let jsf=await ft.json();
+                const roles=jsf.role
+                const ids=jsf.id
+                
+                if (roles==='true') {
+                    // console.log(roles)
+                    // navigate(`/admin/${ids}`)
+                    navigate(`/admin`)
+                } else {
+                    // console.log("object")
+                    // navigate(`/Nav/${ids}`)
+                    navigate(`/Nav`)
+                }
+                
+            }
+           
         }
     })
     const lchange=((e)=>{
