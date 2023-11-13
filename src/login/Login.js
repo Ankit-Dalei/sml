@@ -49,13 +49,14 @@ const Login = () => {
                 })
                 let jsf=await ft.json();
                 const roles=jsf.role
-                const ids=jsf.id
+                // const ids=jsf.id
                 
                 if (roles==='true') {
-                    // console.log(roles)
+                    console.log(jsf)
                     // navigate(`/admin/${ids}`)
-                    navigate(`/admin`)
+                    // navigate(`/admin`)
                 } else {
+                    console.log(roles)
                     // console.log("object")
                     // navigate(`/Nav/${ids}`)
                     navigate(`/Nav`)

@@ -19,7 +19,7 @@ const SignUp = () => {
         const email=sr.Email
         const password=sr.Password
         const role=false
-        const check=sr.check
+        // const check=sr.check
         if (password.length < '8') {
             // console.log(Password)
             Swal.fire({

@@ -15,6 +15,11 @@ import Login from './login/Login';
 import SignUp from './login/SignUp';
 import ForgotPassword from './login/ForgotPassword';
 import Admin from './Admin/Admin';
+import AdminUpdate from './Admin/AdminUpdate';
+import AdminSidebar from './Admin/AdminSidebar';
+import AdminAddAssest from './Admin/AdminAddAssest';
+import AdminUsers from './Admin/AdminUsers';
+import AdminContact from './Admin/AdminContact';
 
 function App() {
   return (
@@ -23,7 +28,14 @@ function App() {
         {/* <Nav/> */}
         <Routes>
           
-          <Route path='/admin/:lid' Component={Admin}/>
+          <Route path='/admin' Component={Admin}/>
+          {/* </Route> */}
+          {/* <Route path='/adminsidebar' Component={AdminSidebar}/> */}
+              <Route path='/UpdateAssest' Component={AdminUpdate}/>
+              <Route path='/addAssest' Component={AdminAddAssest}/>
+              <Route path='/AdminUsers' Component={AdminUsers}/>
+              <Route path='/AdminContacts' Component={AdminContact}/>
+          {/* </Route> */}
           <Route path='/' Component={Home}/>
           <Route path='/Nav' Component={Nav}>
           <Route path='' Component={Main}/>
