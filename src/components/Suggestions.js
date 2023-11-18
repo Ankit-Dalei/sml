@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Suggestions = () => {
+const Suggestions = (props) => {
   const sloop=[]
     for (let index = 0; index < 10; index++) {
       sloop.push(<>
@@ -16,7 +16,7 @@ const Suggestions = () => {
         <div className="suggestion_p_des_section">
           <div className="suggestion_p_name_section">
           {/* <Link to={`./`}> */}
-            Lorem ipsum dolor sit amet consectetur adipisi
+            {props.catagory}
           {/* </Link> */}
           </div>
           <div className="suggestioin_p_chennal_name_section">

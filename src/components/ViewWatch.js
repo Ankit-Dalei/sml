@@ -1,7 +1,7 @@
 import { click } from '@testing-library/user-event/dist/click'
 import React from 'react'
 
-const ViewWatch = () => {
+const ViewWatch = (props) => {
   const zoom=(()=>{
     console.log("call")
     const frame=document.getElementById("frame")
@@ -26,7 +26,7 @@ return (
       <div className="csv_viewwatch">
         <div className="chennal_like_etc_section_viewwatch">
           <div className="P_name_viewwatch">
-            Lorem ipsum dolor sit amet consectetur  jhgfdfgb
+            {props.id}
           </div>
           <div className="p_che_li_viewwatch">
             <div className="p_che_li_left_viewwatch">

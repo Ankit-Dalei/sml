@@ -251,6 +251,7 @@ code {
   width: 100%;
   /* background-color: #fff; */
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   flex-direction: column;

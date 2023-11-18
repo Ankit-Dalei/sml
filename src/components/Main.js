@@ -29,7 +29,7 @@ const Main = () => {
   // let time=`2 day ago`
   // let Id=`0`
   const loops=data.map(item => (
-    <Card img={ item.thumbnail} name={item.name} id={item.id}/>
+    <Card img={ item.thumbnail} name={item.name} id={item.id} contentlink={item.contentlink} description={item.description} catagory={item.catagory} likes={item.likes} Datetime={item.Datetime}/>
   ))
   
   // []

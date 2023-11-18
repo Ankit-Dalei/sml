@@ -43,7 +43,7 @@ function App() {
           <Route path='/Contact' Component={Contact}/>
           <Route path='/history' Component={History}/>
           <Route path='/VR' Component={Vr}/>
-          <Route path='/views/:ids' Component={View}/>
+          <Route path='/views' Component={View}/>
           {/* </Route> */}
           <Route path='/login' Component={Login}/>
           <Route path='/Signup' Component={SignUp}/>
