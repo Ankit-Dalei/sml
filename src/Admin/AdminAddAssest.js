@@ -19,6 +19,7 @@ const AdminAddAssest = () => {
         formData.append('description', description);
         formData.append('likes', likes);
         formData.append('catagory', catagory);
+        // 
             try {
                 fetch('http://localhost:8080/api/uplode',{
                 method:"post",
