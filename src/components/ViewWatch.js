@@ -9,6 +9,7 @@ const ViewWatch = (props) => {
       frame.classList.toggle("full");
       cross.classList.toggle("showss");
   })
+  // 
 const back=(()=>{
   const frame=document.getElementById("frame")
     const cross=document.querySelector("#cross")
