@@ -54,6 +54,8 @@ const SignUp = () => {
             }).then(()=>{
                 // console.log("sent")
                 navigate("/")
+
+                
             }).catch((e)=>{
                 console.log(e)
             })

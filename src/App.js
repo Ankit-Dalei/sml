@@ -29,23 +29,22 @@ function App() {
         <Routes>
           
           <Route path='/admin' Component={Admin}/>
-          {/* </Route> */}
-          {/* <Route path='/adminsidebar' Component={AdminSidebar}/> */}
-              <Route path='/UpdateAssest' Component={AdminUpdate}/>
-              <Route path='/addAssest' Component={AdminAddAssest}/>
-              <Route path='/AdminUsers' Component={AdminUsers}/>
-              <Route path='/AdminContacts' Component={AdminContact}/>
-          {/* </Route> */}
+          <Route path='/UpdateAssest' Component={AdminUpdate}/>
+          <Route path='/addAssest' Component={AdminAddAssest}/>
+          <Route path='/AdminUsers' Component={AdminUsers}/>
+          <Route path='/AdminContacts' Component={AdminContact}/>
+
           <Route path='/' Component={Home}/>
-          <Route path='/Nav' Component={Nav}>
-          <Route path='' Component={Main}/>
-          <Route path='likes' Component={Likes}/>
-          <Route path='watch_later' Component={Watchlater}/>
-          <Route path='Contact' Component={Contact}/>
-          <Route path='history' Component={History}/>
-          <Route path='VR' Component={Vr}/>
-          <Route path='0' Component={View}/>
-          </Route>
+          
+          <Route path='/Nav' Component={Nav}/>
+          {/* <Route path='' Component={Main}/> */}
+          <Route path='/likes' Component={Likes}/>
+          <Route path='/watch_later' Component={Watchlater}/>
+          <Route path='/Contact' Component={Contact}/>
+          <Route path='/history' Component={History}/>
+          <Route path='/VR' Component={Vr}/>
+          <Route path='/views/:ids' Component={View}/>
+          {/* </Route> */}
           <Route path='/login' Component={Login}/>
           <Route path='/Signup' Component={SignUp}/>
           <Route path='/forgot_password' Component={ForgotPassword}/>

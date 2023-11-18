@@ -3,6 +3,7 @@ import Sidebar from './Sidebar'
 import { Link, Outlet } from 'react-router-dom'
 import Space from './Space'
 import Profile from './Profile'
+import Main from './Main'
 
 const Nav = () => {
 
@@ -63,6 +64,7 @@ const Nav = () => {
       
       <Space/>
       <Outlet/>
+      <Main/>
     </>
   )
 }

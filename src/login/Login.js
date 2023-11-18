@@ -40,7 +40,7 @@ const Login = () => {
         // }
         else {
             const data={Username,Password}
-            // console.log(data)
+            console.log(data)
             rs()
             async function rs() {
                 let ft=await fetch(`http://localhost:8080/login/${data.Username}/${data.Password}`,{
@@ -52,11 +52,11 @@ const Login = () => {
                 // const ids=jsf.id
                 
                 if (roles==='true') {
-                    console.log(jsf)
+                    // console.log(jsf)
                     // navigate(`/admin/${ids}`)
-                    // navigate(`/admin`)
+                    navigate(`/admin`)
                 } else {
-                    console.log(roles)
+                    // console.log(roles)
                     // console.log("object")
                     // navigate(`/Nav/${ids}`)
                     navigate(`/Nav`)
