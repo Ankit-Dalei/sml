@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-
+// 
 const Suggestions = (props) => {
   const img = `data:image/png;base64,${props.img}`;
   // const sloop=[]
