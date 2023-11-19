@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = (props) => {
   const obj={
-    "Nav":<i className="fa-solid fa-house"></i>,
+    "":<i className="fa-solid fa-house"></i>,
     "likes":<i className="fa-regular fa-thumbs-up"></i>,
     "watch_later":<i className="fa-solid fa-clock-rotate-left"></i>,
     "Contact":<i className="fa-solid fa-shapes"></i>,

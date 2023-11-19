@@ -2,6 +2,7 @@ import { click } from '@testing-library/user-event/dist/click'
 import React from 'react'
 
 const ViewWatch = (props) => {
+ const contentlink=props.contentlink
   const zoom=(()=>{
     console.log("call")
     const frame=document.getElementById("frame")
@@ -21,13 +22,13 @@ return (
   <div className="viewwatch_body">
     <div className="iframe_section_viewwatch" id='frame'>
       <button><i className="fa-solid fa-reply hide" id='cross' onClick={back}></i></button>
-      <iframe src="https://fentonesports.com/test/" frameborder="0" className="iframe"></iframe>
+      <iframe src={contentlink} frameborder="0" className="iframe"></iframe>
     </div>
     <div className="comment_section_view">
       <div className="csv_viewwatch">
         <div className="chennal_like_etc_section_viewwatch">
           <div className="P_name_viewwatch">
-            {props.id}
+            {props.name}
           </div>
           <div className="p_che_li_viewwatch">
             <div className="p_che_li_left_viewwatch">

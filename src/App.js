@@ -26,6 +26,7 @@ function App() {
     <>
       <Router>
         {/* <Nav/> */}
+        {/* <Home/> */}
         <Routes>
           
           <Route path='/admin' Component={Admin}/>
@@ -36,15 +37,17 @@ function App() {
 
           <Route path='/' Component={Home}/>
           
-          <Route path='/Nav' Component={Nav}/>
-          {/* <Route path='' Component={Main}/> */}
-          <Route path='/likes' Component={Likes}/>
-          <Route path='/watch_later' Component={Watchlater}/>
-          <Route path='/Contact' Component={Contact}/>
-          <Route path='/history' Component={History}/>
-          <Route path='/VR' Component={Vr}/>
-          <Route path='/views' Component={View}/>
-          {/* </Route> */}
+          <Route path='/Nav' Component={Nav}>
+          <Route index element={<Main />} />
+          {/* <Route path='Nav' Component={Main}/> */}
+          <Route path='likes' Component={Likes}/>
+          <Route path='watch_later' Component={Watchlater}/>
+          <Route path='Contact' Component={Contact}/>
+          <Route path='history' Component={History}/>
+          <Route path='VR' Component={Vr}/>
+          <Route path='views' Component={View}/>
+          </Route>
+          
           <Route path='/login' Component={Login}/>
           <Route path='/Signup' Component={SignUp}/>
           <Route path='/forgot_password' Component={ForgotPassword}/>

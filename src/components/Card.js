@@ -7,8 +7,10 @@ const Card = (props) => {
   const dataToSend=[]
   dataToSend.push(props.id)
   dataToSend.push(props.catagory)
+  dataToSend.push(props.contentlink)
+  dataToSend.push(props.name)
   const Nextpage=(()=>{
-    navigate('/views', { state: { data: dataToSend } });
+    navigate('views', { state: { data: dataToSend } });
     // console.log("object")
   })
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Sidebar from './Sidebar'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, Route } from 'react-router-dom'
 import Space from './Space'
 import Profile from './Profile'
 import Main from './Main'
@@ -64,7 +64,8 @@ const Nav = () => {
       
       <Space/>
       <Outlet/>
-      <Main/>
+      {/* <Main/> */}
+      {/* <Route index element={<Main />} /> */}
     </>
   )
 }
